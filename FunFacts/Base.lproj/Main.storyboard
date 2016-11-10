@@ -21,25 +21,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PF2-0a-Bmf">
-                                <rect key="frame" x="97" y="318" width="180" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PF2-0a-Bmf">
+                                <rect key="frame" x="20" y="547" width="335" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iDn-Vm-XYF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Show Another Fun Fact"/>
                                 <connections>
                                     <action selector="showFunFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vk-PE-FWa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some fact goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-5L-LSi">
-                                <rect key="frame" x="16" y="134" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-5L-LSi">
+                                <rect key="frame" x="20" y="268.5" width="335" height="129"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX2-I0-3Ry">
+                                <rect key="frame" x="20" y="70" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lmb-5L-LSi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HKo-7o-3yo"/>
+                            <constraint firstItem="lmb-5L-LSi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="JZb-gg-A8P"/>
+                            <constraint firstItem="jX2-I0-3Ry" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="N6g-cc-ucS"/>
+                            <constraint firstAttribute="trailing" secondItem="PF2-0a-Bmf" secondAttribute="trailing" constant="20" id="dBS-XD-ddC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PF2-0a-Bmf" secondAttribute="bottom" constant="80" id="eqS-Jx-1ef"/>
+                            <constraint firstAttribute="trailing" secondItem="lmb-5L-LSi" secondAttribute="trailing" constant="20" id="fr9-QZ-kR8"/>
+                            <constraint firstItem="jX2-I0-3Ry" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="hwm-8P-3vV"/>
+                            <constraint firstItem="PF2-0a-Bmf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zHv-As-HK5"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="funFactButton" destination="PF2-0a-Bmf" id="e0P-Lt-Tb9"/>
                         <outlet property="funFactsLabel" destination="lmb-5L-LSi" id="Za9-so-dwS"/>
                     </connections>
                 </viewController>
